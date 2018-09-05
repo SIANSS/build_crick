@@ -1,7 +1,8 @@
-var getUrl = window.location;
-var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-console.log(baseUrl);
+
 module.exports = function(app, passport) {
+  var getUrl = window.location;
+  var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+  console.log(baseUrl);
 
     app.get(baseUrl + '/', function(req, res) {
       res.render('index.ejs', {
