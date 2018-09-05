@@ -1,6 +1,9 @@
+var getUrl = window.location;
+var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+console.log(baseUrl);
 module.exports = function(app, passport) {
 
-    app.get('/', function(req, res) {
+    app.get(baseUrl + '/', function(req, res) {
       res.render('index.ejs', {
         user : req.user
       });
