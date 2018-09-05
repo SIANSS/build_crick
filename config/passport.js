@@ -1,6 +1,5 @@
 var LocalStrategy   = require('passport-local').Strategy;
 var User = require('../app/models/user');
-var configAuth = require('./auth')
 
 module.exports = function(passport) {
 
@@ -43,7 +42,7 @@ module.exports = function(passport) {
           var user            = req.user;
           user.local.email    = email;
           user.local.password = user.generateHash(password);
-          
+
           user.save(function(err) {
             if (err)
             throw err;

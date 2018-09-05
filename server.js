@@ -18,11 +18,11 @@ require('./config/passport')(passport); // pass passport for configuration
 app.use(express.static(path.join(__dirname, "/app/public")));
 
 app.set('view engine', 'ejs'); // set up ejs for templating
-// app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
-app.use(bodyParser()); // get information from html forms
+app.use(bodyParser.urlencoded({extended: true})); // get information from html forms
 
 
 app.use(session({ secret: 'letsbreaksomecode' })); // session secret
