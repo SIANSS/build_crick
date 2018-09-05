@@ -14,7 +14,7 @@ module.exports = function(app, passport) {
       res.render('register.ejs', { message: req.flash('signupMessage') });
     });
 
-    app.post('/signup', passport.authenticate('local-signup', {
+    app.post(baseUrl +'/signup', passport.authenticate('local-signup', {
       successRedirect : '/',
       failureRedirect : '/signup',
       failureFlash : true
@@ -24,7 +24,7 @@ module.exports = function(app, passport) {
         res.render('login.ejs', { message: req.flash('loginMessage')});
     });
     //
-    app.post('/login', passport.authenticate('local-login', {
+    app.post(baseUrl +'/login', passport.authenticate('local-login', {
         successRedirect : '/',
         failureRedirect : '/login',
         failureFlash : true
@@ -34,7 +34,7 @@ module.exports = function(app, passport) {
       res.render('connect-local.ejs', { message: req.flash('loginMessage')});
     });
     //
-    app.post('/connect/local', passport.authenticate('local-signup', {
+    app.post(baseUrl +'/connect/local', passport.authenticate('local-signup', {
       successRedirect : '/',
       failureRedirect : '/connect/local',
       failureFlash : true
