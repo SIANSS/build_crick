@@ -10,7 +10,7 @@ module.exports = function(app, passport) {
       });
     });
 
-    app.get('/signup', function(req, res) {
+    app.get(baseUrl + '/signup', function(req, res) {
       res.render('register.ejs', { message: req.flash('signupMessage') });
     });
 
@@ -20,7 +20,7 @@ module.exports = function(app, passport) {
       failureFlash : true
     }));
 
-    app.get('/login', function(req, res) {
+    app.get(baseUrl + '/login', function(req, res) {
         res.render('login.ejs', { message: req.flash('loginMessage')});
     });
     //
@@ -30,7 +30,7 @@ module.exports = function(app, passport) {
         failureFlash : true
     }));
     //
-    app.get('/connect/local', function(req, res) {
+    app.get(baseUrl + '/connect/local', function(req, res) {
       res.render('connect-local.ejs', { message: req.flash('loginMessage')});
     });
     //
@@ -40,7 +40,7 @@ module.exports = function(app, passport) {
       failureFlash : true
     }));
     //
-    app.get('/unlink/local', function(req, res) {
+    app.get(baseUrl + '/unlink/local', function(req, res) {
       var user            = req.user;
       user.local.email    = undefined;
       user.local.password = undefined;
