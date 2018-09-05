@@ -2,15 +2,16 @@
 <div class="feed">
   main content
   <% if (user) { %>
-    <%if(user.local.email) {%>
+    <% if (user.local.email) {%>
   <div class="feeder">
     news feed
     <a href="/unlink/local" class="btn btn-default">Unlink</a>
   </div>
   <% } else { %>
-    <a href="/signup" class="btn btn-primary">Signup</a>
+    <!-- <a href="/signup" class="btn btn-primary">Signup</a> -->
+    <button type="button" onclick="" name="button">signup</button>
   <% } } else {%>
-    <a href="/signup" class="btn btn-primary">Signup</a>
+    <!-- <a href="/signup" class="btn btn-primary">Signup</a> -->
     <% } %>
   <div class="carousel">
     slideshow

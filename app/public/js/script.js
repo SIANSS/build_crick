@@ -1,26 +1,26 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+var getUrl = window.location;
+var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+console.log(baseUrl);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+xhttp.open("GET", baseUrl, false);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send();
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+function register(){
+  var email = document.getElementById("umail").value;
+  var password = document.getElementById("code").value;
+  var params = "mail="+email+"&password="+password;
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      var data = JSON.parse(this.responseText);
+      //console.log(this.responseText)
+
+    }
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+
+  xhttp.open("POST", baseUrl +"signup", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send(params);
 }
