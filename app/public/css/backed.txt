@@ -1,0 +1,198 @@
+body{
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: auto;
+  padding-right: auto;
+}
+body > .clogo {
+ display: block;
+ background-color: #b6b6b6;
+ margin: 0px;
+ padding-top: 1.5%;
+ padding-left: 1.5%;
+}
+body > .clogo > img {
+ display: inline-block;
+ width: 15%;
+ padding-bottom: 0.25%;
+ /*border: 2px solid black;*/
+}
+body > .clogo > .navsec {
+ background-color: silver;
+ width: 80%;
+ display: inline-block;
+ /*margin: 0px;*/
+ /*padding: 0px;*/
+ /*border: 2px solid red;*/
+}
+body > .clogo > .navsec >.navbar{
+ display: inline-block;
+ list-style: none;
+ /*border: 2px solid maroon;*/
+}
+body > .clogo > .navsec > .navbar-right{
+ margin-left: 30%;
+ display: inline-block;
+ list-style: none;
+ /*border: 2px solid gold;*/
+}
+body > .clogo > .navsec > ul > li{
+ display: inline-block;
+ padding-left:30px;
+ padding-right: 30px;
+ padding-top: 10px;
+ background-color: red;
+ border-radius: 5px;
+}
+body > .clogo > .navsec > ul > li:hover{
+ background-color: white;
+}
+body > .clogo > .navsec > ul > li > a{
+ display: block;
+ text-decoration: none;
+ font-size: 16px;
+ padding-bottom: 10px;
+}
+body > .clogo > .navsec > ul > li > a:hover{
+ text-decoration: none;
+ color: black;
+}
+body > .adbanner {
+ background-color: lightgreen;
+ display: inline-block;
+ width: 100%;
+ height: 20%;
+ margin: 0px;
+ padding: 2%;
+}
+
+body > .adbanner > h1 {
+ margin: 0px;
+}
+body > .sidebanner{
+ display: block;
+ background-color: lightgreen;
+ padding: 0.5%;
+ margin: 5% 2% 5% 2%;
+}
+.banleft {
+ float: left;
+ width: 15%;
+ height: 40%;
+}
+.banright {
+ float: right;
+ width: 15%;
+ height: 40%;
+}
+.carousel {
+ display: inline-block;
+ width: 50%;
+ margin: 2.5% auto 2.5% auto;
+ padding: 2.5%;
+ background-color: lightgray;
+}
+
+/*Carousel code from w3schools*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle; margin-left: auto; margin-right: auto; display: block;}
+
+/* Slideshow container */
+.slideshow-container {
+ max-width: 1000px;
+ position: relative;
+ margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+ cursor: pointer;
+ position: absolute;
+ top: 50%;
+ width: auto;
+ padding: 16px;
+ margin-top: -22px;
+ color: white;
+ font-weight: bold;
+ font-size: 18px;
+ transition: 0.6s ease;
+ border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+ right: 0;
+ border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+ background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+ color: #f2f2f2;
+ font-size: 15px;
+ padding: 8px 12px;
+ position: absolute;
+ bottom: 8px;
+ width: 100%;
+ text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+ color: #f2f2f2;
+ font-size: 12px;
+ padding: 8px 12px;
+ position: absolute;
+ top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+ cursor: pointer;
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ background-color: #bbb;
+ border-radius: 50%;
+ display: inline-block;
+ transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+ background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+ -webkit-animation-name: fade;
+ -webkit-animation-duration: 1.5s;
+ animation-name: fade;
+ animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+ from {opacity: .4}
+ to {opacity: 1}
+}
+
+@keyframes fade {
+ from {opacity: .4}
+ to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+ .prev, .next,.text {font-size: 11px}
+}
+
+.mySlides{
+ padding-left: auto;
+ padding-right: auto;
+}
