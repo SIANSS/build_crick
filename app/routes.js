@@ -1,6 +1,6 @@
 module.exports = function(app, passport) {
 
-    app.get('/', function(req, res) {
+    app.get('/index', function(req, res) {
       res.render('index.ejs', {
         user : req.user
       });
@@ -11,7 +11,7 @@ module.exports = function(app, passport) {
     });
 
     app.post('/signup', passport.authenticate('local-signup', {
-      successRedirect : '/',
+      successRedirect : '/index',
       failureRedirect : '/signup',
       failureFlash : true
     }));
@@ -21,7 +21,7 @@ module.exports = function(app, passport) {
     });
 
     app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/',
+        successRedirect : '/index',
         failureRedirect : '/login',
         failureFlash : true
     }));
@@ -37,12 +37,13 @@ module.exports = function(app, passport) {
     }));
     //
     app.get('/unlink/local', function(req, res) {
-      var user            = req.user;
-      user.local.email    = undefined;
-      user.local.password = undefined;
-      user.save(function(err) {
-        res.redirect('/');
-      });
+      res.redirect("/");
+      // var user            = req.user;
+      // user.local.email    = undefined;
+      // user.local.password = undefined;
+      // user.save(function(err) {
+      //   res.redirect('/');
+      // });
     });
 
   };
