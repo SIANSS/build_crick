@@ -1,7 +1,7 @@
-* {
+/* * {
   height: 100%;
   box-sizing: border-box;
-}
+} */
 body{
   margin: 0px;
   height: 100%;
@@ -11,6 +11,13 @@ body{
   width: 100%;
   border: 2px solid red;
   height: 20%;
+}
+.cricklog {
+  width: 20%;
+  height: auto;
+}
+.container{
+  margin: 0px!important;
 }
 .logo_container{
   /* display: flex; */
